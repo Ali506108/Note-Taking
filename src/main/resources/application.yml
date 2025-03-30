@@ -2,5 +2,10 @@ spring:
   application:
     name: Note-taking
 
-
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      username: ${REDIS_PASSWORD}
+      password: ${REDIS_PASSWORD}
 

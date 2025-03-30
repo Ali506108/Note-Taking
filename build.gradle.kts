@@ -30,6 +30,7 @@ dependencies {
 
 	implementation("org.springframework.kafka:spring-kafka")
 	implementation("org.springframework.boot:spring-boot-starter-webflux")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	testImplementation("io.projectreactor:reactor-test")
 
 	compileOnly("org.projectlombok:lombok")
