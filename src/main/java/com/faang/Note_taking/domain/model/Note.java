@@ -5,19 +5,17 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.redis.core.RedisHash;
+
+import java.time.LocalDateTime;
 
 @Entity
 @RedisHash
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
-public class Note {
+    public class Note {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,5 +25,15 @@ public class Note {
 
     private String content;
 
+    private LocalDateTime createdAt;
 
+
+    public Note(Long id, String title, String content, LocalDateTime createdAt) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.createdAt = createdAt;
+    }
+
+    public Note(){}
 }

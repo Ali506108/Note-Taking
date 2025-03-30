@@ -24,6 +24,13 @@ repositories {
 }
 
 dependencies {
+
+	implementation("org.languagetool:language-en:6.5")
+
+	implementation("org.languagetool:languagetool-core:6.4")
+
+	implementation("com.atlassian.commonmark:commonmark:0.17.0")
+
 	implementation("org.springframework.boot:spring-boot-starter-data-redis")
 
 	implementation("org.springframework.boot:spring-boot-starter-web")
